@@ -1,0 +1,210 @@
+:root
+{
+    --Neutral-900: hsl(227, 75%, 14%);
+    --Neutral-800: hsl(226, 25%, 17%);
+--Neutral700: hsl(225, 23%, 24%);
+ --Neutral600: hsl(226, 11%, 37%);
+--Neutral-300: hsl(0, 0%, 78%);
+ --Neutral-200: hsl(217, 61%, 90%);
+ --Neutral-100: hsl(0, 0%, 93%);
+ --Neutral-0: hsl(200, 60%, 99%);
+ --red-0:hsl(3, 77%, 44%);
+}
+body{
+    background-color: var(--Neutral-200);
+}
+.head
+{background-color: var(--Neutral-0);
+    padding: 15px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.head>div
+{
+    background-image: url(/assets/images/icon-moon.svg);
+    background-color: var(--Neutral-200);
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:    transform 1s;
+}
+.head>div:hover
+{
+    transform: rotate(180deg);
+    background-color: var(--Neutral-300);
+}
+.continer
+{
+padding: 20px;
+}
+.extension-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 15px;
+    font-weight: 900;
+    color: var(--Neutral-900);
+}
+.active-buttons
+{
+    background-color:var(--red-0) ;
+    color: var(--Neutral-0);
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    font-weight: 900;
+}
+.notActive
+{
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    color: var(--Neutral-900);
+    background-color: var(--Neutral-0);
+}
+.extension-continer
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+  
+
+}
+.extension-continer >div
+{
+    background-color: var(--Neutral-0);
+    width: 30%;
+    padding: 0px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+/* ;
+    grid-template-rows: 50% 50%; */
+    height: 200px;
+    flex-wrap: wrap;
+}
+.extension-continer >div:hover
+{
+
+}
+.extension-continer img 
+{
+   width: 50px;
+   transform: translateY(30px);
+}
+.extension-continer >div >div:first-of-type
+{
+    width: 70%;
+    padding: 10px;
+    height: 60%;
+}
+.extension-continer >div p 
+{
+ color: var(--Neutral-600);
+}
+.divButtons button
+{
+    border-radius: 15px;
+
+    padding: 8px 15px;
+    border: 1px solid var(--Neutral-900);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    background-color: var(--Neutral-0);
+    color: var(--Neutral-900);
+
+}
+.divButtons button:hover
+{
+    background-color: hsl(3, 77%, 44%);
+    color:var(--Neutral-0);
+    border: transparent;
+}
+.in-avtive-button
+{
+    width: 40px;
+    background-color:var(--Neutral-300);
+    height: 10px;
+    border-radius: 30px;
+    position: relative;
+
+    padding: 6px;
+    display: flex
+    ;
+        align-items: center;
+        transition:    transform 1s ;
+        cursor: pointer;
+}
+.avtive-button
+{
+    width: 40px;
+    background-color:hsl(3, 71%, 56%);
+    height: 10px;
+    border-radius: 30px;
+    position: relative;
+ 
+    padding: 6px;
+    display: flex
+    ;
+        align-items: center;
+        transition:    transform 1s ;
+        cursor: pointer;
+        
+}
+.avtive-button span
+{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    transform: translateX(25px);
+}
+.in-avtive-button span
+{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+}
+.divButtons
+{
+    display: flex
+    ;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+}
+@media(max-width:860px)
+{
+    .extension-continer >div{
+        width: 45%;
+    }
+}
+@media(max-width:600px)
+{
+    .extension-continer >div{
+        width: 100%;
+    }
+    .extension-continer
+    {
+        justify-content: center;
+    }
+}
