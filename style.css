@@ -25,7 +25,7 @@ body{
 }
 .head>div
 {
-    background-image: url(./assets/images/icon-moon.svg);
+    background-image: url("./assets/images/icon-moon.svg");
     background-color: var(--Neutral-200);
     width: 35px;
     height: 35px;
@@ -210,10 +210,15 @@ padding: 20px;
     .extension-list
     {
         font-size: 20px;
+        padding: 15px 0px;
     }
-    .extension-list>button
+
+    .active-buttons
     {
         padding: 5px;
     }
-    
+    .notActive
+    {
+        padding: 5px;
+    }
 }
