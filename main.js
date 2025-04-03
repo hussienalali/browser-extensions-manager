@@ -10,11 +10,11 @@ let filterActive=document.getElementById("Active")
 let filternonActive=document.getElementById("Inactive")
 let filterALL=document.getElementById("all")
 let buttonState =document.getElementById("state")
-// let d = JSON.parse(data.responseText)
+
 data.onload=function()
 {
     let maindataa =JSON.parse(this.responseText)
-    console.log(maindataa)
+
     maindataa.forEach(ext => {
         let extcard = document.createElement("div")
         let ext_title = document.createElement("h3")
@@ -69,16 +69,16 @@ remove.addEventListener(`click`,()=>{
     });
 }
 let removbutt= document.querySelectorAll("button")
-console.log(removbutt)
+
 removbutt.forEach(butt => {
     butt.addEventListener(`click`,()=>{
-        console.log(`g`)
+     
     })
 });
 
 activButton.forEach(actt =>{
     actt.addEventListener(`click`,()=>{
-        console.log(`g`)
+      
     })
 })
 filterActive.onclick=function()
@@ -127,7 +127,7 @@ filterALL.onclick=function()
 buttonState.onclick=function()
 {
     if(buttonState.className==="day")
-{    buttonState.style.backgroundImage="url(/assets/images/icon-sun.svg)"
+{    buttonState.style.backgroundImage="url(./assets/images/icon-sun.svg)"
 buttonState.className="night"
 document.documentElement.style.setProperty(`--Neutral-0`,`hsl(226, 11%, 37%)`)
 document.documentElement.style.setProperty(`--Neutral-100`,`hsl(225, 23%, 24%)`)
@@ -137,7 +137,7 @@ document.documentElement.style.setProperty(`--Neutral-900`,`hsl(0, 0%, 78%)`)
 document.documentElement.style.setProperty(`--Neutral-600`,`hsl(0, 0%, 78%)`)
 }
 else if(buttonState.className==="night")
-{buttonState.style.backgroundImage="url(/assets/images/icon-moon.svg)"
+{buttonState.style.backgroundImage="url(./assets/images/icon-moon.svg)"
     buttonState.className="day"
     document.documentElement.style.setProperty(`--Neutral-0`,` hsl(200, 60%, 99%)`)
 document.documentElement.style.setProperty(`--Neutral-100`,`hsl(0, 0%, 93%)`)
